@@ -12,7 +12,7 @@ Edite `assets/content.js`. As propriedades incluem `publications`, `projects`, `
 
 Após editar, execute `python3 scripts/sync-content.py` para atualizar também o HTML estático usado por mecanismos de busca e visitantes sem JavaScript. O script usa somente a biblioteca padrão do Python. O JavaScript lê o mesmo conteúdo e mantém os controles interativos; nenhuma informação depende exclusivamente dele para ser lida.
 
-A produção científica mostra quatro registros inicialmente e os demais em um controle expansível nativo. Os projetos mostram três inicialmente, com os demais em uma lista expansível. A demonstração de representações é identificada como sintética e fica em um controle separado dos projetos reais.
+A produção científica mostra quatro registros inicialmente e os demais em um controle expansível nativo. Os projetos mostram três inicialmente, com os demais em uma lista expansível.
 
 ## Fontes e critérios
 
@@ -53,7 +53,7 @@ Documentação oficial: https://developers.google.com/search/docs/fundamentals/s
 
 Newsreader nos títulos e Manrope no texto, hospedadas localmente em `assets/fonts/`, com licenças OFL. Paleta branca com verde oliva e terracota. O site respeita movimento reduzido, navegação por teclado e mantém o conteúdo legível sem JavaScript.
 
-A ilustração decorativa `assets/manifold-transparent.webp` foi produzida com Image Gen: escultura toroidal tridimensional de fios finos em verde oliva, inspirada em topologia e gravura científica, sem textos ou eixos. O gráfico interativo é SVG nativo com dados sintéticos.
+A ilustração decorativa `assets/manifold-transparent.webp` foi produzida com Image Gen: escultura toroidal tridimensional de fios finos em verde oliva, inspirada em topologia e gravura científica, sem textos ou eixos.
 
 ## Fotos, marcas e imagens dos trabalhos
 

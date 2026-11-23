@@ -148,17 +148,6 @@ nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); }
 .empty-publications p { color: var(--muted); }
 #experimentos { padding-top: 56px; padding-bottom: 80px; }
 #experimentos > h2 { border-bottom: 1px solid var(--line); padding-bottom: 30px; margin-bottom: 58px; }
-.demo { display: grid; grid-template-columns: 31% 1fr; gap: 52px; align-items: start; }
-.demo-copy { padding-top: 16px; }
-.demo-copy h3 { font-size: 40px; line-height: 1.2; letter-spacing: -1px; margin-bottom: 24px; }
-.demo-copy p { max-width: 300px; font-size: 17px; color: var(--muted); }
-.demo-copy button { margin-top: 30px; }
-.demo-body { min-width: 0; }
-.demo svg { width: 100%; height: auto; display: block; overflow: visible; }
-.chart-grid { fill: none; stroke: #dfe2db; stroke-width: .5; }
-.axes { fill: none; stroke: #7e8578; stroke-width: .6; }
-.axis-labels { font: 12px ui-monospace, 'Courier New', monospace; fill: var(--muted); }
-#points { animation: plot-appear 500ms ease both; }
 #experience p { color: var(--muted); max-width: 460px; }
 #experiencia { display: grid; grid-template-columns: 40% 1fr; gap: 32px; padding-block: 65px 150px; }
 footer { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-block: 30px 38px; border-top: 1px solid var(--line); }
@@ -178,7 +167,6 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
 .skip-link { position: absolute; top: 8px; left: 8px; background: var(--paper); padding: 12px; transform: translateY(-200%); z-index: 10; }
 .skip-link:focus { transform: none; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-@keyframes plot-appear { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy { animation: arrive 750ms cubic-bezier(.2,.65,.3,1) both; }
   .hero-art { animation: arrive 1000ms cubic-bezier(.2,.65,.3,1) 100ms both; }
@@ -195,10 +183,6 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
   .intro p { font-size: 16px; max-width: 390px; }
   #sobre #about { font-size: 42px; }
   .section h2 { font-size: 40px; }
-  .demo { grid-template-columns: 32% 1fr; gap: 28px; }
-  .demo-copy h3 { font-size: 34px; }
-  .demo-copy p { font-size: 16px; }
-  .demo-copy button { font-size: 14px; padding-inline: 18px; }
   .empty-publications h3 { font-size: 26px; }
 }
 @media (max-width: 760px) {
@@ -226,14 +210,6 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
   .empty-publications h3 { font-size: 26px; }
   #experimentos { padding-block: 40px 44px; }
   #experimentos > h2 { margin-bottom: 28px; padding-bottom: 24px; }
-  .demo { grid-template-columns: 1fr; gap: 32px; }
-  .demo-copy { padding-top: 0; }
-  .demo-copy h3 { font-size: 32px; line-height: 1.15; margin-bottom: 16px; }
-  .demo-copy h3 br { display: none; }
-  .demo-copy p { max-width: 290px; font-size: 16px; }
-  .demo-copy button { margin-top: 22px; }
-  .demo svg { width: 100%; }
-  .axis-labels { font-size: 26px; }
   #experiencia { grid-template-columns: 1fr; gap: 24px; padding-block: 40px 76px; }
   footer { align-items: flex-start; flex-direction: column; gap: 18px; padding-block: 26px 30px; }
   .footer-name { font-size: 28px; }
@@ -277,10 +253,8 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
 }
 #projects { max-width: 1000px; }
 .project > p:not(.meta) { font-size: 17px; margin-top: 12px; color: var(--muted); max-width: 850px; }
-.demo-disclosure { margin-top: 46px; border-top: 1px solid var(--line); }
-.demo-disclosure summary, .academic-disclosure summary { color: var(--olive); cursor: pointer; padding-block: 24px; font-size: 16px; }
-.demo-disclosure[open] > summary { margin-bottom: 24px; }
-.academic-disclosure summary:focus-visible, .demo-disclosure summary:focus-visible { outline: 2px solid var(--olive); outline-offset: 4px; }
+.academic-disclosure summary { color: var(--olive); cursor: pointer; padding-block: 24px; font-size: 16px; }
+.academic-disclosure summary:focus-visible { outline: 2px solid var(--olive); outline-offset: 4px; }
 .education { margin-top: 44px; padding-top: 38px; border-top: 1px solid var(--line); }
 #experience .group-heading { margin-bottom: 10px; font-size: 36px; }
 #experience h4 { font: 400 28px/1.2 var(--serif); letter-spacing: -.7px; margin: 0 0 10px; }

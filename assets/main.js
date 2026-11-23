@@ -220,24 +220,4 @@
     article.append(heading, element('p', item.description));
     return article;
   });
-  let sample = 0;
-  function draw() {
-    const points = document.createDocumentFragment();
-    const gaussian = () => Math.sqrt(-2 * Math.log(Math.max(Number.EPSILON, Math.random()))) * Math.cos(2 * Math.PI * Math.random());
-    for (let group = 0; group < 2; group++) {
-      for (let i = 0; i < 85; i++) {
-        const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        const x = Math.max(46, Math.min(474, (group ? 365 : 150) + gaussian() * 33));
-        const y = Math.max(21, Math.min(299, (group ? 88 : 233) + gaussian() * 29));
-        dot.setAttribute('cx', x.toFixed(2)); dot.setAttribute('cy', y.toFixed(2));
-        dot.setAttribute('r', '2.8'); dot.setAttribute('fill', group ? '#b8765e' : '#637258');
-        points.append(dot);
-      }
-    }
-    document.getElementById('points').replaceChildren(points);
-    sample++;
-    if (sample > 1) text('sample-status', `Amostra ${sample} gerada: 170 pontos sintéticos em dois grupos.`);
-  }
-  draw();
-  document.getElementById('regenerate').addEventListener('click', draw);
 })();
