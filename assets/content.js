@@ -777,15 +777,22 @@ window.portfolio = {
       "source": "https://lattes.cnpq.br/9766331030709079"
     }
   ],
-  "profileImage": {
-    "src": "assets/images/murilo-salem.webp",
-    "alt": "Murilo Salem, em foto publicada na página de estudantes do GAIA/UFPel",
-    "width": 720,
-    "height": 1280,
-    "credit": "Foto: GAIA/UFPel",
-    "source": "https://wp.ufpel.edu.br/gaia/estudantes/",
-    "original": "https://wp.ufpel.edu.br/gaia/files/2026/01/WhatsApp-Image-2026-01-03-at-16.10.48.jpeg"
-  },
+  "profileImages": [
+    {
+      "src": "assets/images/murilo-portrait.webp",
+      "alt": "Retrato de Murilo Costa Salem.",
+      "width": 970,
+      "height": 1250,
+      "caption": "Retrato"
+    },
+    {
+      "src": "assets/images/murilo-dpvsa.webp",
+      "alt": "Murilo Salem ao lado do pôster de sua pesquisa sobre classificadores de lesões de pele no DPVSA 2026.",
+      "width": 1000,
+      "height": 1333,
+      "caption": "Apresentação de pesquisa · DPVSA 2026"
+    }
+  ],
   "institutions": [
     {
       "name": "CEDRA · FIERGS",

@@ -295,10 +295,10 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
 }
 
 /* Photographs and original research documents, sourced from their publishers. */
-.portrait { max-width: 264px; margin-top: 32px; }
+.portrait-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.portrait { min-width: 0; margin: 0; }
 .portrait > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 47%; border-radius: 2px; }
-.portrait figcaption { font: 400 13px/1.6 var(--sans); margin-top: 12px; }
-.portrait figcaption a { color: var(--muted); }
+.portrait figcaption { font: 400 12px/1.55 var(--sans); color: var(--muted); margin-top: 10px; }
 .institution-area { margin-top: 42px; padding-top: 26px; border-top: 1px solid var(--line); }
 .institution-area h3 { font-size: 25px; margin-bottom: 22px; }
 .institution-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
@@ -320,7 +320,7 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
 .paper-preview figcaption > a:hover { color: var(--olive); text-decoration: underline; }
 .paper-preview figcaption > span { display: block; font-size: 13px; line-height: 1.6; color: var(--muted); margin-top: 9px; }
 @media (max-width: 1100px) {
-  .portrait { max-width: 220px; }
+  .portrait-gallery { gap: 10px; }
   .institution-strip { gap: 12px; }
   .institution-frame { height: 74px; }
   .institution-frame img { max-height: 50px; }
@@ -328,8 +328,9 @@ footer { display: flex; justify-content: space-between; align-items: baseline; g
   .paper-preview figcaption > a { font-size: 19px; }
 }
 @media (max-width: 760px) {
-  .about-profile { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
-  .portrait { width: 140px; margin-top: 0; }
+  .about-profile { display: block; }
+  .portrait-gallery { margin-top: 18px; gap: 12px; }
+  .portrait { width: auto; }
   .portrait figcaption { font-size: 12px; }
   .institution-area h3 { font-size: 24px; }
   .institution-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }

@@ -57,13 +57,13 @@ A ilustração decorativa `assets/manifold-transparent.webp` foi produzida com I
 
 ## Fotos, marcas e imagens dos trabalhos
 
-As imagens reais ficam em `assets/images/`, hospedadas junto com o site. A foto de Murilo foi obtida na página oficial de estudantes do GAIA, onde está identificada com seu nome: https://wp.ufpel.edu.br/gaia/estudantes/.
+As imagens reais ficam em `assets/images/`, hospedadas junto com o site. As duas fotos da seção Sobre foram enviadas por Murilo; a segunda mostra sua apresentação no DPVSA 2026. Uma foto de perfil anterior do GAIA permanece em `assets/images/murilo-salem.webp` como ativo de origem.
 
 As marcas de CEDRA, GAIA, UFPel e FURG foram obtidas nos respectivos sites institucionais, com cores e proporções preservadas. As variantes claras são exibidas em fundo escuro para manter o contraste. Elas identificam instituições da trajetória do autor.
 
 As oito prévias de trabalhos são renderizações da primeira página dos PDFs originais do arXiv, Computer on the Beach e da Biblioteca Digital da Sociedade Brasileira de Computação (SBC). Não são figuras ou resultados de pesquisa gerados por IA. Os PDFs completos não foram incluídos no repositório; as prévias levam às páginas editoriais. As imagens foram codificadas em WebP e carregam sob demanda.
 
-Os campos `profileImage`, `institutions` e `paperImages` de `assets/content.js` guardam arquivos locais, textos alternativos e URLs originais. Para trocar uma imagem, atualize esses campos e execute `python3 scripts/sync-content.py`.
+Os campos `profileImages`, `institutions` e `paperImages` de `assets/content.js` guardam arquivos locais, textos alternativos e legendas. Para trocar uma imagem, atualize esses campos e execute `python3 scripts/sync-content.py`.
 
 ## Carrossel de papers
 

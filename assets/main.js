@@ -10,7 +10,7 @@
     const rest = document.createElement('em');
     rest.textContent = parts.length ? `${parts.join(' ')}.` : '';
     document.getElementById('titulo').replaceChildren(first, rest);
-    document.title = `${data.name} · Pesquisa em IA`;
+    document.title = `${data.fullName || data.name} | ${data.role || 'Pesquisa em IA'}`;
   }
   if (data.role) {
     const role = document.getElementById('role');
@@ -56,7 +56,15 @@
     if (item.height) image.height = item.height;
     return image;
   }
-  if (data.profileImage) {
+  if (data.profileImages?.length) {
+    const gallery = element('div', '', 'portrait-gallery');
+    gallery.append(...data.profileImages.map(item => {
+      const figure = element('figure', '', 'portrait');
+      figure.append(media(item), element('figcaption', item.caption));
+      return figure;
+    }));
+    document.getElementById('profile-image').replaceChildren(gallery);
+  } else if (data.profileImage) {
     const figure = element('figure', '', 'portrait');
     const caption = element('figcaption');
     caption.append(link(data.profileImage.credit, data.profileImage.source));

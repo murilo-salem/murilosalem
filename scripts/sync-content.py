@@ -71,9 +71,14 @@ def image(item):
     size = ''.join(f' {key}="{int(item[key])}"' for key in ['width', 'height'] if item.get(key))
     return f'<img src="{e(item["src"])}" alt="{e(item["alt"])}"{size} loading="lazy" decoding="async">'
 
-portrait = data.get('profileImage')
-if portrait:
-    block('portrait', '<figure class="portrait">'+image(portrait)+'<figcaption>'+link(portrait['credit'], portrait['source'])+'</figcaption></figure>')
+portraits = data.get('profileImages')
+if portraits:
+    figures = ''.join('<figure class="portrait">'+image(item)+'<figcaption>'+e(item.get('caption', ''))+'</figcaption></figure>' for item in portraits)
+    block('portrait', '<div class="portrait-gallery">'+figures+'</div>')
+else:
+    portrait = data.get('profileImage')
+    if portrait:
+        block('portrait', '<figure class="portrait">'+image(portrait)+'<figcaption>'+link(portrait['credit'], portrait['source'])+'</figcaption></figure>')
 institutions = ''
 for index, item in enumerate(data.get('institutions', [])):
     institutions += f'<figure class="institution institution-{index}"><a href="{e(item["url"])}"><span class="institution-frame">'+image(item)+'</span><span class="institution-name">'+e(item['name'])+'</span></a></figure>'
@@ -97,6 +102,5 @@ for name, value in [('role', e(data['role']).replace('&amp;', '&amp;<br>')), ('i
 about = e(data['about'])
 about = re.sub(r'(inteligência artificial\.?)', r'<em>\1</em>', about, flags=re.I)
 page = re.sub(r'(<p id="about">).*?(</p>)', lambda m: m[1]+about+m[2], page, flags=re.S)
-page = re.sub(r'<meta name="description" content="[^"]*">', lambda _: '<meta name="description" content="'+e(data['fullName']+' · '+data['role']+'. Publicações, projetos, experiência e formação.')+'">', page)
 (ROOT / 'index.html').write_text(page)
 print(f'Synchronized {len(data["publications"])} publications, {len(data["projects"])} projects and profile sections.')
