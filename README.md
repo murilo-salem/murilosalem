@@ -43,9 +43,9 @@ Documentação oficial: https://docs.github.com/en/pages/quickstart
 
 ## SEO e indexação
 
-`index.html` inclui título e descrição, URL canônica, cartões Open Graph/Twitter e dados estruturados `ProfilePage`/`Person` com os perfis públicos confirmados. `robots.txt` permite rastreamento e aponta para `sitemap.xml`, que lista a página inicial. A imagem de compartilhamento está em `assets/og-card.svg` (fonte vetorial); `assets/og-card.png` é a versão usada por plataformas sociais.
+`index.html` inclui título e descrição, URL canônica, cartões Open Graph/Twitter e dados estruturados `WebPage`/`Person` com os perfis públicos confirmados. `robots.txt` permite rastreamento e aponta para `sitemap.xml`, que lista a página inicial. A imagem de compartilhamento está em `assets/og-card.svg` (fonte vetorial); `assets/og-card.png` é a versão usada por plataformas sociais.
 
-Essas configurações ajudam mecanismos de busca a entender e apresentar o perfil, mas não garantem posição nos resultados nem indexação imediata. Para acompanhar e solicitar a indexação no Google, adicione a propriedade `https://murilo-salem.github.io/` no Search Console, confirme que é o proprietário e envie `https://murilo-salem.github.io/murilosalem/sitemap.xml`. A verificação depende da conta Google do autor.
+Essas configurações ajudam mecanismos de busca a entender e apresentar o perfil, mas não garantem posição nos resultados nem indexação imediata. Para acompanhar e solicitar a indexação no Google, adicione a propriedade de prefixo de URL `https://murilo-salem.github.io/murilosalem/` no Search Console, confirme que é o proprietário e envie `https://murilo-salem.github.io/murilosalem/sitemap.xml`. A verificação depende da conta Google do autor.
 
 Documentação oficial: https://developers.google.com/search/docs/fundamentals/seo-starter-guide · https://developers.google.com/search/docs/appearance/structured-data/profile-page
 
