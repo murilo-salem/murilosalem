@@ -33,16 +33,21 @@ Fontes editoriais conferidas:
 - https://periodicos.univali.br/index.php/acotb/article/view/22184
 - https://periodicos.univali.br/index.php/acotb/article/view/22188
 
-## Publicar no GitHub Pages
+## Publicação no GitHub Pages
 
-1. Crie um repositório público. Para o endereço `https://SEU_USUARIO.github.io`, use o nome `SEU_USUARIO.github.io`. Também é possível usar um repositório comum e o endereço `https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/`.
-2. Envie estes arquivos para a branch `main`.
-3. Em **Settings → Pages → Build and deployment → Source**, selecione **Deploy from a branch**.
-4. Selecione **main** e **/ (root)**; salve e aguarde a publicação.
+Este portfólio está publicado em https://murilo-salem.github.io/murilosalem/. O GitHub Pages entrega o conteúdo da branch `main`, na raiz do repositório. O arquivo `.nojekyll` permite servir os arquivos diretamente.
 
-Os caminhos relativos funcionam nos dois formatos de URL. O arquivo `.nojekyll` permite servir os arquivos diretamente.
+Para publicar alterações, sincronize o HTML após editar `assets/content.js`, faça commit e envie para `main`. O GitHub Pages atualiza o site automaticamente. Os caminhos relativos dos assets preservam o funcionamento no endereço de projeto.
 
 Documentação oficial: https://docs.github.com/en/pages/quickstart
+
+## SEO e indexação
+
+`index.html` inclui título e descrição, URL canônica, cartões Open Graph/Twitter e dados estruturados `ProfilePage`/`Person` com os perfis públicos confirmados. `robots.txt` permite rastreamento e aponta para `sitemap.xml`, que lista a página inicial. A imagem de compartilhamento está em `assets/og-card.svg` (fonte vetorial); `assets/og-card.png` é a versão usada por plataformas sociais.
+
+Essas configurações ajudam mecanismos de busca a entender e apresentar o perfil, mas não garantem posição nos resultados nem indexação imediata. Para acompanhar e solicitar a indexação no Google, adicione a propriedade `https://murilo-salem.github.io/` no Search Console, confirme que é o proprietário e envie `https://murilo-salem.github.io/murilosalem/sitemap.xml`. A verificação depende da conta Google do autor.
+
+Documentação oficial: https://developers.google.com/search/docs/fundamentals/seo-starter-guide · https://developers.google.com/search/docs/appearance/structured-data/profile-page
 
 ## Identidade visual
 
